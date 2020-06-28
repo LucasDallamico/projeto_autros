@@ -1,0 +1,32 @@
+{% load static %}
+<html>
+    <meta charset="utf-8">
+    <title>
+        Descrição
+    </title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+    <body>
+        <header>
+        <h1> Descrição do projeto </h1>
+        <nav>
+            <ul>
+                <li> <a href="{% url 'inicio' %}"> Inicio</a> </li>
+                <li> <a href="{% url 'descricao' %}"> Descrição do projeto </a></li>
+                <li> <a href="{% url 'contato' %}"> Contato </a></li>
+            </ul>
+        </nav>
+        <section>
+            <h2>Descrição do projeto AUTROS</h2>
+            <p>Esse projeto tem como objetivo fazer a automatização de um 
+                comodo de uma casa. O controle é feito pela internet. <br>
+
+            <h2>Requisitos do projeto</h2>
+            * O controle é feito por um site de internt, que pode ser acesso
+            de qualquer dispositivo e fora da rede. <br>
+            * Um raspberry PI 3 será a plataforma que irá interagir com os
+            hardwares da casa. <br>
+        </section>
+        </header>
+    </body>
+</html>

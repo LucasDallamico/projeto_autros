@@ -1,0 +1,70 @@
+{% load static %}
+<html>
+    <meta charset="utf-8">
+    <title>
+        Projeto AUTROS
+    </title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+    <body>
+        <header>
+            <h1> Projeto Autros </h1>
+            <nav>
+                <ul>
+                    <li> <a href="{% url 'inicio' %}"> Inicio</a> </li>
+                    <li> <a href="{% url 'descricao' %}"> Descrição do projeto </a></li>
+                    <li> <a href="{% url 'contato' %}"> Contato </a></li>
+                </ul>
+            </nav>
+
+            <section>
+                <h2> Painel de controle da casa</h2>
+                <paragrafo1>
+                    Cada botão representa um respectivo objeto, para ligar ou
+                    desligar <br>
+                </paragrafo1>
+                <form method="POST">
+                    {% csrf_token %}
+                    <input type="submit" value='Lampada 1' name='lamp'> 
+                    <input type="submit" value='Lampada 2' name='lamp'>
+                </form>
+            </section>
+
+            <section>
+                <h2>Acesso ao painel</h2>
+                    <input type="nickname" name="txtnome" placeholder="nome">
+                    <input type="password" name="txtsenha" placeholder="Senha">
+                    <br/>
+                    <input type="button"  value="Conectar" onclick="conectar_painel()">
+            </section>
+            
+            <form>
+                Primeiro nome:
+                <br>
+                <input type="text" name="firstname">
+                
+                Último nome: 
+                <input type="text" name="lastname">
+            </form>
+
+            <section>
+                <form method="POST">
+                    {% csrf_token %}
+                    <label for="word">Digite uma palavra:</label>
+                    <input id="word" type="text" name="palavra" value="" />
+                    <input type="submit" value='Lampada 1' name='lamp1'> 
+                    <input type="submit" value='Lampada 2' name='lamp2'> 
+                    {% if count != None %}
+                        <br><br>
+                        Palavra digitada: {{palavra}}<br>
+                        Número de caracteres: {{count}}
+                    {% endif %}
+                </form>
+            </section>
+
+            <footer>
+                <p>Desenvolvido por Lucas Barros Dallamico
+              </footer>
+        </header>
+    </body>
+</html>

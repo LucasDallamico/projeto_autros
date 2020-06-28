@@ -1,0 +1,29 @@
+{% load static %}
+<html>
+    <meta charset="utf-8">
+    <title>
+        Contato
+    </title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+    <body>
+        <header>
+        <h1> Contato </h1>
+        <nav>
+            <ul>
+                <li> <a href="{% url 'inicio' %}"> Inicio</a> </li>
+                <li> <a href="{% url 'descricao' %}"> Descrição do projeto </a></li>
+                <li> <a href="{% url 'contato' %}"> Contato </a></li>
+            </ul>
+        </nav>
+        <section>
+            <h2>Quem eu sou ?</h2>
+            Lucas Barros Dallamico, Estudante de engenharia mecatrônica da UFSC - campi Joinville-SC. <br>
+        </section>
+        <section>
+            GUITHUB: https://github.com/LucasDallamico <br>
+            E-mail: lucas.dallamico@hotmail.com <br>
+        </section>
+        </header>
+    </body>
+</html>
