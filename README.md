@@ -1,5 +1,6 @@
 # projeto_autros
-Projeto de automação residência usando raspberry 
+Projeto de automação residência usando raspberry
+*** ESTÁ EM FASE DE TESTE ***
 
 ## Objetivo
 Usando o Django e REST_Framework, o objetivo é controlar vários pontos da casa usando um site da internet.
