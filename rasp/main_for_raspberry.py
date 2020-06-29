@@ -13,12 +13,10 @@ url_request = (
 )
 
 # -------------------------------------
-def solicita_estado_modulos():
+def solicita_estado_modulos() -> dict:
     '''
-    DESCRIPTION:
-        Função obtem o json do servidor
-    RETURN:
-        Dict -> estado dos modulos
+    Função obtem o json do servidor
+
     '''
     resposta_server_json = requests.get(url_request)
     if resposta_server_json:
@@ -59,7 +57,10 @@ if __name__ == "__main__":
     #GPIO.setup(16, GPIO.IN)
     my_modulos = modulos()
     while(True):
-        estados_em_dic = solicita_estado_modulos()
-        print(estados_em_dic)
-        my_modulos.set_estados_modulos(estados_em_dic)
+        try:
+            estados_em_dic = solicita_estado_modulos()
+            print(estados_em_dic)
+            my_modulos.set_estados_modulos(estados_em_dic)
+        except:
+            print("Não foi possível solicitar a página")
         time.sleep(5) #Esperar 5 segundos
