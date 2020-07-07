@@ -1,0 +1,1 @@
+web: gunicorn projeto-autros --max-requests 1200

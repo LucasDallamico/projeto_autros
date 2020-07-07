@@ -8,10 +8,14 @@ import time
 # Lembrar de escolhers a portas com sabedoria
 # -------------------------------------
 # Urls de interação
+"""
 url_request = (
     "http://127.0.0.1:8000/estado_rasp/"
 )
-
+"""
+url_request = (
+    "https://intueor.serveousercontent.com/estado_rasp/"
+)
 # -------------------------------------
 def solicita_estado_modulos() -> dict:
     '''

@@ -22,3 +22,8 @@ basta executar o arquivo "start_servers.sh", ele abrirá duas janelas, uma para 
 Executar o script em rasp/, usando o comando "python3 main_for_raspberry.py"
 
 
+## Referencias para pacotes usados
+
+### APACHE2 + Django tutorial
+https://github.com/codingforentrepreneurs/Guides/blob/master/all/DjangoPiNetworkServerGuide.md
+
