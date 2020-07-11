@@ -25,10 +25,7 @@ SECRET_KEY = '*a&b9)i9rv-l+1-s_ba_f#bv*j70)cnds%bsn7*@re8x(p(yse'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    'intueor.serveousercontent.com',
-    '192.168.2.106',
-]
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition

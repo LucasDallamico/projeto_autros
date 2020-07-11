@@ -1,0 +1,17 @@
+language: python
+python:
+  - "3.7.3"
+
+stages:
+  - name: deploy
+
+jobs:
+  include:
+    - stage: deploy
+      name: Heroku Deploy
+      script: /bin/true
+      deploy:
+        provider: heroku
+        app: projeto-autros
+        on: master
+        run: "python web/PROJETO_AUTROS/manage.py migrate"

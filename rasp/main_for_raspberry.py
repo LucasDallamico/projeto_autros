@@ -4,7 +4,7 @@ import requests
 import pickle
 import time
 # Raspberry
-#import RPi.GPIO as GPIO
+import RPi.GPIO as GPIO
 # Lembrar de escolhers a portas com sabedoria
 # -------------------------------------
 # Urls de interação
@@ -54,11 +54,18 @@ if __name__ == "__main__":
     a definição "GPIO.BOARD (ex. Pino 12)" para 
     "GPIO.BCM (ex.GPIO 18)"
     """
-    #GPIO.setmode(GPIO.BOARD)
+    GPIO.setmode(GPIO.BOARD)
     # Setando as portas como saida
-    #GPIO.setup(12, GPIO.OUT) # lamp1
-    #GPIO.setup(16, GPIO.OUT) #lamp 2
+    GPIO.setup(18, GPIO.OUT) # lamp1
+    GPIO.setup(16, GPIO.OUT) # lamp 2
     #GPIO.setup(16, GPIO.IN)
+    GPIO.output(18,0)
+    GPIO.output(16,0)
+    time.sleep(10) #Esperar 5 segundos
+    GPIO.output(18,0)
+    GPIO.output(16,0)
+    GPIO.cleanup()
+    """
     my_modulos = modulos()
     while(True):
         try:
@@ -68,3 +75,4 @@ if __name__ == "__main__":
         except:
             print("Não foi possível solicitar a página")
         time.sleep(5) #Esperar 5 segundos
+    """
