@@ -1,5 +1,3 @@
-rasp
-web/PROJETO_AUTROS/*.pyc
-web/PROJETO_AUTROS/*.sqlite3
-web/PROJETO_AUTROS/PROJETO_AUTROS/__pycache__
-web/PROJETO_AUTROS/api/__pycache__
+*.pyc
+*.sqlite3
+__pycache__
