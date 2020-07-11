@@ -7,7 +7,11 @@ DATABASES = {
     'default': dj_database_url.config()
 }
 
-STATIC_ROOT = os.path.join('BASE_DIR', 'staticfiles')
+
+# Heroku Statics Hack (nÃ£o Ã© muito recomendado para produÃ§Ã£o!!)
+# https://devcenter.heroku.com/articles/django-assets
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MIDDLEWARE.append('whitenoise.middleware.WhiteNoiseMiddleware')
 

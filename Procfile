@@ -1,1 +1,1 @@
-web: gunicorn projeto-autros --max-requests 1200
+web: gunicorn PROJETO_AUTROS.wsgi --max-requests 1200
