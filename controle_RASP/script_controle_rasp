@@ -1,0 +1,7 @@
+[Unit]
+Description= Projeto Autros inicializado ...
+[Service]
+Type=simple
+ExecStart=/home/lucas/controle_rasp/"python3 controle_RASP.py"
+[Install]
+WantedBy=multi-user.target
