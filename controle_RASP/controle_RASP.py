@@ -43,7 +43,7 @@ class modulos():
         # PORTA e ESTADO [ 0 des, 1 lig ]
         GPIO.output(porta_lamp1,(not self.lamp1))
         GPIO.output(porta_lamp2,(not self.lamp2))
-        print(self.lamp1,self.lamp2)
+        #print(self.lamp1,self.lamp2)
 
 # -------------------------------------
 if __name__ == "__main__":
@@ -72,10 +72,11 @@ if __name__ == "__main__":
     while(True):
         try:
             estados_em_dic = solicita_estado_modulos()
-            print(estados_em_dic)
+            #print(estados_em_dic)
             my_modulos.set_estados_modulos(estados_em_dic)
         except:
-            print("Não foi possível solicitar a página")
+            pass
+            #print("Não foi possível solicitar a página")
         time.sleep(5) #Esperar 5 segundos
     #limpa a reserva das portas
     GPIO.cleanup()
