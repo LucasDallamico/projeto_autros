@@ -20,7 +20,7 @@ porta_lamp2 = 18
 # -------------------------------------
 def solicita_estado_modulos() -> dict:
     '''
-    Função obtem o json do servidor
+    Função que busca o json do servidor
 
     '''
     resposta_server_json = requests.get(url_request)
@@ -56,7 +56,7 @@ if __name__ == "__main__":
     "GPIO.BCM (ex.GPIO 18)"
     """
     GPIO.setmode(GPIO.BOARD)
-    # Setando as portas como saida
+    # escrevendo as portas como saida
     GPIO.setup(porta_lamp1, GPIO.OUT)
     GPIO.setup(porta_lamp2, GPIO.OUT) 
     #GPIO.setup(16, GPIO.IN)
