@@ -8,13 +8,13 @@ from rest_framework import status
 import json
 
 def faz_alteracao_dados_brutos(str_site, dic_de_dados):
-    if str_site == "Lampada 1":
+    if str_site == "Tomada":
         if dic_de_dados['lamp1'] == 0:
             dic_de_dados['lamp1'] = 1
         else:
             dic_de_dados['lamp1'] = 0
 
-    elif str_site == "Lampada 2":
+    elif str_site == "Lâmpada quarto":
         if dic_de_dados['lamp2'] == 0:
             dic_de_dados['lamp2'] = 1
         else:
