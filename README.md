@@ -1,9 +1,11 @@
 # projeto_autros
 Projeto de automação residência usando raspberry
 
-*** Esta em contrução *** 
+*** Esta em construção *** 
 
 mas já está funcional
+
+link da aplicação: https://projeto-autros.herokuapp.com/
 
 ## Objetivo
 Usando o Django e REST_Framework, o objetivo é controlar vários pontos da casa usando um site da internet.

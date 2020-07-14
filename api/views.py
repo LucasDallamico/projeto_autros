@@ -52,7 +52,6 @@ def redirect_contato(request):
     response = redirect('/contato/')
     return response
 
-
 @api_view(['GET'])
 def estado_rasp(request):
     if request.method == 'GET':
